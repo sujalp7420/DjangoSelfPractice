@@ -1,8 +1,56 @@
-h1 {
-    text-align: center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
 }
 
-head {
-    background-color: aqua;
-    color: beige;
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.chai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.chai-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.chai-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.chai-item img {
+    width: 100%;
+    height: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+.chai-item h3 {
+    margin: 15px 10px 5px;
+    color: #222;
+}
+
+.chai-item p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
 }

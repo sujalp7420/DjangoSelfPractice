@@ -1,7 +1,41 @@
 {% extends "website/layout.html" %}
+
 {% block title %}
 All Chai
 {% endblock %}
+
 {% block body %}
-<h1>All Chai Menu</h1>
+
+<h1>All Chai ☕</h1>
+
+<div style="
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+">
+
+  {% for chai in chais %}
+    <div style="
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    ">
+      <img 
+        src="{{ chai.image.url }}" 
+        alt="{{ chai.name }}"
+        style="
+          width: 100%;
+          height: 100px;      /* <-- SMALL IMAGE */
+          object-fit: cover;
+          display: block;
+        "
+      >
+      <h3 style="margin: 10px 0;">{{ chai.name }}</h3>
+    </div>
+  {% endfor %}
+
+</div>
+
 {% endblock %}
